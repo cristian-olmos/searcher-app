@@ -29,7 +29,7 @@ export class DashboardComponent implements OnInit {
     console.log(this.selectedServices);
     console.log(this.selectedCategories);
     console.log(this.hotelName);
-    this.hotelsService.getHotels()
+    this.hotelsService.search(this.hotelName, this.selectedCategories, this.selectedServices)
       .subscribe(hotels => this.hotels = hotels.data);
   }
 

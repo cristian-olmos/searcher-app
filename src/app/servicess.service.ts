@@ -11,7 +11,7 @@ import {ServicesResponse} from './shared/models/servicesResponse';
 @Injectable({providedIn: 'root'})
 export class ServicesService {
 
-  private heroesUrl = 'http://localhost:8080/v1/services';  // URL to web api
+  private heroesUrl = 'http://localhost:8080/searcher-api/v1/services';  // URL to web api
 
   httpOptions = {
     headers: new HttpHeaders({'Content-Type': 'application/json'})
