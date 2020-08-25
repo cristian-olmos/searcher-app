@@ -1,0 +1,33 @@
+<div *ngIf="hotel">
+  <h2>{{hotel.name | uppercase}}
+    <ng-template [ngIf]="hotel.category == 3">***</ng-template>
+    <ng-template [ngIf]="hotel.category == 4">****</ng-template>
+    <ng-template [ngIf]="hotel.category == 5">*****</ng-template>
+  </h2>
+  <div>{{hotel.address}}</div>
+</div>
+
+<div *ngIf="rooms">
+  <h2>Rooms</h2>
+  <ul class="rooms">
+    <li *ngFor="let room of rooms">
+      <a routerLink="/hotel/{{room.id}}">
+        <span class="badge">
+          {{room.name}}
+        </span>
+        {{room.price}}€
+      </a>
+    </li>
+  </ul>
+</div>
+
+<div *ngIf="services">
+  <h2>Services</h2>
+  <ul class="services">
+    <li *ngFor="let service of services">
+        <span class="badge">
+          {{service.name}}
+        </span>
+    </li>
+  </ul>
+</div>

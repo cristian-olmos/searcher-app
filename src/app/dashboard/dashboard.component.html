@@ -1,0 +1,37 @@
+<form>
+  <label>Hotel</label><input name="hotel-name" [(ngModel)]="hotelName" type="text"><br>
+  <label>Category</label><br>
+  <input id="three_stars" name="three_stars" type="checkbox" (change)="onChangeCategories(3, $event.target.checked)"
+         value="three_stars"/>
+  <label for="three_stars">3 Stars</label>
+  <input id="four_stars" name="four_stars" type="checkbox" (change)="onChangeCategories(4, $event.target.checked)"
+         value="four_stars"/>
+  <label for="four_stars">4 Stars</label>
+  <input id="five_stars" name="five_stars" type="checkbox" (change)="onChangeCategories(5, $event.target.checked)"
+         value="five_stars"/>
+  <label for="five_stars">5 Stars</label>
+  <br>
+  <label>Services</label><br>
+  <span *ngFor="let service of services">
+    <input id="{{service.id}}" name="{{service.id}}" type="checkbox"
+           (change)="onChange(service.id, $event.target.checked)" value="{{service.id}}"/>
+    <label for="{{service.id}}">{{service.name}}</label>
+  </span>
+  <br><input type="button" (click)="search()" value="Search"/>
+</form>
+
+<div>
+  <ul class="hotels">
+    <li *ngFor="let hotel of hotels">
+      <a routerLink="/hotel/{{hotel.id}}">
+        <span class="badge">
+          {{hotel.name}}
+          <ng-template [ngIf]="hotel.category == 3">***</ng-template>
+          <ng-template [ngIf]="hotel.category == 4">****</ng-template>
+          <ng-template [ngIf]="hotel.category == 5">*****</ng-template>
+        </span>
+
+      </a>
+    </li>
+  </ul>
+</div>
