@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import {HotelsService} from '../services/hotels.service';
-import {Hotel} from '../shared/models/hotel';
-import {ServicesService} from '../services/servicess.service';
-import {Service} from '../shared/models/service';
+import {HotelsService} from '../core/services/hotels.service';
+import {Hotel} from '../core/models/hotel';
+import {ServicesService} from '../core/services/servicess.service';
+import {Service} from '../core/models/service';
 
 @Component({
   selector: 'app-dashboard',

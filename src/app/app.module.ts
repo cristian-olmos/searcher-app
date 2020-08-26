@@ -7,8 +7,8 @@ import {AppComponent} from './app.component';
 import {DashboardComponent} from './dashboard/dashboard.component';
 import {HotelComponent} from './hotel/hotel.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {LoginComponent} from './login/login.component';
-import {BasicAuthHtppInterceptorService} from './services/auth.inteceptor.service';
+import {LoginComponent} from './shared/components/login/login.component';
+import {BasicAuthHtppInterceptorService} from './core/services/auth.inteceptor.service';
 
 @NgModule({
   declarations: [

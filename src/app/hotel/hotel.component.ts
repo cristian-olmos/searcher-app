@@ -1,10 +1,10 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
-import {HotelsService} from '../services/hotels.service';
-import {Hotel} from '../shared/models/hotel';
+import {HotelsService} from '../core/services/hotels.service';
+import {Hotel} from '../core/models/hotel';
 import {Location} from '@angular/common';
-import {Room} from '../shared/models/room';
-import {Service} from '../shared/models/service';
+import {Room} from '../core/models/room';
+import {Service} from '../core/models/service';
 
 @Component({
   selector: 'app-hotel',
