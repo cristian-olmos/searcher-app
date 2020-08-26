@@ -5,10 +5,10 @@ import {Observable, of} from 'rxjs';
 import {catchError, tap} from 'rxjs/operators';
 
 import {MessageService} from './message.service';
-import {HotelsResponse} from './shared/models/hotelsResponse';
-import {HotelResponse} from './shared/models/hotelResponse';
-import {RoomsResponse} from './shared/models/roomsResponse';
-import {ServicesResponse} from './shared/models/servicesResponse';
+import {HotelsResponse} from '../shared/models/hotelsResponse';
+import {HotelResponse} from '../shared/models/hotelResponse';
+import {RoomsResponse} from '../shared/models/roomsResponse';
+import {ServicesResponse} from '../shared/models/servicesResponse';
 
 
 @Injectable({providedIn: 'root'})
